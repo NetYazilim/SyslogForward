@@ -1,4 +1,6 @@
 # syslog forwarder
+## Forward syslog messages to [Telegraf](https://docs.influxdata.com/telegraf/)
+
 ```
 
 docker run -d --network syslog --name telegraf  netyazilim/telegraf 
