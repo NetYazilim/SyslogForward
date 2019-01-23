@@ -6,7 +6,9 @@ ENV TARGET_NAME "telegraf"
 ENV TARGET_PORT 6514
 VOLUME /shared
 
-RUN apk add --update --no-cache rsyslog
+RUN apk update && \
+    apk upgrade && \
+    apk add --update --no-cache rsyslog
 RUN mkdir -p /tmp/rsyslog
 COPY rsyslog.conf /etc/rsyslog.conf
 
